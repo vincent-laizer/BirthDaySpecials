@@ -13,7 +13,7 @@
             font-family: fantasy;
             background-image: url("bday2.gif");
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 100%;
         }
     </style>
 
@@ -97,19 +97,19 @@
 
                var score=0;
 
-               if( $("#qn1").val().toLowerCase() == "leonard" ){
+               if( $("#qn1").val().toLowerCase().trim() == "leonard" ){
                 score++;
                }
-               if( $("#qn2").val() == "22" ){
+               if( $("#qn2").val().trim() == "22" ){
                 score++;
                }
-               if( $("#qn3").val().toLowerCase() == "pestana" ){
+               if( $("#qn3").val().toLowerCase().trim() == "pestana" ){
                 score++;
                }
-               if( $("#qn4").val() == "1" ){
+               if( $("#qn4").val().trim() == "1" ){
                 score++;
                }
-               if( $('input[name="status"]:checked').val() == "single" ){
+               if( $('input[name="status"]:checked').val().trim() == "single" ){
                 score++;
                }
 
