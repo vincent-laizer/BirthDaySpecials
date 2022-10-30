@@ -81,6 +81,11 @@
                 <h1 id="score">4/5</h1>
             </div>
 
+            <div id="answers">
+                <p>Here are the correct Answers</p>
+
+            </div>
+
             <div class="mt-4">
                 <blockquote class="p-2 text-center" style="background-color: rgba(231, 228, 9, 0.897); border-radius: 5px;">
                     <p style="font-size: 20px; font-weight: bold;" id="quote">"In your special day, know that we care."</p>
@@ -91,6 +96,7 @@
         </div>
 
         <div class="m-2 text-center">
+            <p>Don't stop here send this link ( <a href="https://bit.ly/3FzwAV3">https://bit.ly/3FzwAV3</a> ) to more of her friends</p>
             <strong>Happy Birthday Becca</strong>
         </div>
     </div>
@@ -103,21 +109,37 @@
                });
 
                var score=0;
+               var correction = Array();
 
                if( $("#qn1").val().toLowerCase().trim() == "walter" ){
                 score++;
                }
+               else{
+                $("#answers").append("<ul><li>Her middle name is Walter</li>");
+               }
                if( $("#qn2").val().trim() == "20" ){
                 score++;
+               }
+               else{
+                $("#answers").append("<li>She is 20 years old</li>");
                }
                if( $("#qn3").val().toLowerCase().trim() == "london" ){
                 score++;
                }
+               else{
+                $("#answers").append("<li>Her favorite place of residence is London</li>");
+               }
                if( $("#qn4").val().trim() == "2" ){
                 score++;
                }
+               else{
+                $("#answers").append("<li>She has two siblings, Tony and Shadrack</li>");
+               }
                if( $('input[name="status"]:checked').val() == "single" ){
                 score++;
+               }
+               else{
+                $("#answers").append("<li>She is single, men what are you waiting for!</li></ul>");
                }
 
                if(score >= 4){
@@ -127,6 +149,13 @@
                else{
                 $("#positive").hide();
                 $("#negative").show();
+               }
+
+               if(score < 5){
+                $("#answers").show();
+               }
+               else{
+                $("#answers").hide();
                }
 
                $("#score").text(score+"/5");
