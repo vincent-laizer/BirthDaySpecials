@@ -9,64 +9,64 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <style>
-        body{
+        /* body{
             font-family: fantasy;
             background-image: url("bday2.gif");
             background-repeat: repeat-y;
             background-size: 100%;
-        }
+        } */
     </style>
 
-    <title>HBD Charles</title>
+    <title>HBD Specials</title>
 </head>
 <body class="mx-1">
-    <div class="col-lg-5 col-sm-12 mx-auto my-2" id="main" style="border: 1px solid orange;">
-        <div class="mx-1 text-center" style="border-bottom: 2px solid orange;">
-            <h3>Its Charles's Birthday, but</h3>
-            <h2>How Well Do You Know The BDay Boy?</h2>
+    <div class="col-lg-5 col-sm-12 mx-auto my-2" id="main" style="border: 1px solid rgb(5, 50, 102);">
+        <div class="mx-1 text-center" style="border-bottom: 2px solid rgb(5, 50, 102);">
+            <h3>Its Rebecca's Birthday!</h3>
+            <h2>How Well Do You Know The BDay Girl?</h2>
         </div>
 
-        <div id="qn-page" class="mx-1 my-4 pb-2" style="border-bottom: 2px solid orange;">
+        <div id="qn-page" class="mx-1 my-4 pb-2" style="border-bottom: 2px solid rgb(5, 50, 102);">
             <div class="form-group my-3">
-                <label for="qn1">What's his middle name?</label>
+                <label for="qn1">What's her middle name?</label>
                 <input type="text" class="form-control" id="qn1">
             </div>
 
             <div class="form-group my-3">
-                <label for="qn2">How old is he now?</label>
+                <label for="qn2">How old is she now?</label>
                 <input type="text" class="form-control" id="qn2">
             </div>
 
             <div class="form-group my-3">
-                <label for="qn3">Where has he never gone but constantly mentions the place?</label>
+                <label for="qn3">What's her favorite placec of residence?</label>
                 <input type="text" class="form-control" id="qn3">
             </div>
 
             <div class="form-group my-3">
-                <label for="qn4">How many siblings does he have?</label>
+                <label for="qn4">How many siblings does she have?</label>
                 <input type="text" class="form-control" id="qn4">
             </div>
 
             <div class="form-group my-3">
-                <label for="qn5">What's his relationship status?</label><br>
+                <label for="qn5">What's her relationship status?</label><br>
                 <label for="qn5a" class="mx-2">Single</label> <input type="radio" name="status" value="single" id="qn5a"><br>
                 <label for="qn5b" class="mx-2">Dating</label> <input type="radio" name="status" value="dating" id="qn5b"><br>
-                <label for="qn5c" class="mx-2">Has an ex</label> <input type="radio" name="status" value="ex" id="qn5c"><br>
+                <label for="qn5c" class="mx-2">Married</label> <input type="radio" name="status" value="ex" id="qn5c"><br>
             </div>
 
             <div class="text-center">
-                <button id="submit" class="btn btn-warning">Submit</button>
+                <button id="submit" class="btn" style="background-color: rgb(5, 50, 102); color: white;">Submit</button>
             </div>
         </div>
 
-        <div id="score-page" class="mx-2 my-4 pb-2 text-center" style="border-bottom: 2px solid orange; display: none;">
+        <div id="score-page" class="mx-2 my-4 pb-2 text-center" style="border-bottom: 2px solid rgb(5, 50, 102); display: none;">
             
             <div id="positive">
-                <p>Horray! It seems you know him quite well, <br><strong>send him a screenshot as a gift</strong></p>
+                <p>Horray! It seems you know her quite well, <br><strong>send her a screenshot as a gift</strong></p>
             </div>
 
             <div id="negative">
-                <p>Ooh Snap! Try and spend more time with him, <br><strong>send him a screenshot as a gift</strong></p>
+                <p>Ooh Snap! Try and spend more time with her, <br><strong>anyway send her a screenshot as a gift</strong></p>
             </div>
 
             <div>
@@ -75,16 +75,16 @@
             </div>
 
             <div class="mt-4">
-                <blockquote class="p-2 text-center" style="background-color: rgba(167, 170, 165, 0.24); border-radius: 5px;">
-                    <p style="font-size: 20px; font-weight: bold;">"Chuo bata" , "mtanange mkaliii!"</p>
-                    <cite>Birthday Boy</cite>
+                <blockquote class="p-2 text-center" style="background-color: rgba(231, 228, 9, 0.897); border-radius: 5px;">
+                    <p style="font-size: 20px; font-weight: bold;" id="quote">"In your special day, know that we care."</p>
+                    <!-- <cite>Birthday Girl</cite> -->
                 </blockquote>
             </div>
             
         </div>
 
         <div class="m-2 text-center">
-            <strong>Happy Birthday Charles</strong>
+            <strong>Happy Birthday Becca</strong>
         </div>
     </div>
 
@@ -97,16 +97,16 @@
 
                var score=0;
 
-               if( $("#qn1").val().toLowerCase().trim() == "leonard" ){
+               if( $("#qn1").val().toLowerCase().trim() == "walter" ){
                 score++;
                }
-               if( $("#qn2").val().trim() == "22" ){
+               if( $("#qn2").val().trim() == "20" ){
                 score++;
                }
-               if( $("#qn3").val().toLowerCase().trim() == "pestana" ){
+               if( $("#qn3").val().toLowerCase().trim() == "london" ){
                 score++;
                }
-               if( $("#qn4").val().trim() == "1" ){
+               if( $("#qn4").val().trim() == "2" ){
                 score++;
                }
                if( $('input[name="status"]:checked').val() == "single" ){
@@ -123,6 +123,13 @@
                }
 
                $("#score").text(score+"/5");
+
+               quotes = ["Our age is merely the number of years the world has been enjoying us!",
+                        "I hope your celebration gives you many happy memories!",
+                        "Wishing you the biggest slice of happy today.",
+                        "It's your special day — get out there and celebrate!",
+                        "Hope all your birthday wishes come true!"];
+               $("#quote").text(quotes[Math.floor(Math.random()*quotes.length)]);
 
             });
         });
