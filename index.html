@@ -33,35 +33,35 @@
 
         <div id="qn-page" class="mx-1 my-4 pb-2" style="border-bottom: 2px solid rgb(5, 50, 102);">
             <div class="form-group my-3">
-                <label for="qn1"><b>Fullname</b></label>
+                <label for="qn1"><b>The song playing is from his favourite movie, which is?</b></label>
                 <input type="text" class="form-control" id="qn1">
             </div>
 
             <div class="form-group my-3">
-                <label for="qn2"><b>How old is she now?</b></label>
+                <label for="qn2"><b>How old is he now?</b></label>
                 <input type="text" class="form-control" id="qn2">
             </div>
 
             <div class="form-group my-3">
-                <label for="qn3"><b>What's her favorite place of residence?</b></label>
+                <label for="qn3"><b>He has an ex from his class, who is her?</b></label>
                 <input type="text" class="form-control" id="qn3">
             </div>
 
             <div class="form-group my-3">
-                <label for="qn4"><b>How many siblings does she have?</b></label>
+                <label for="qn4"><b>Favourite Game?</b></label>
                 <input type="text" class="form-control" id="qn4">
             </div>
 
             <div class="form-group my-3">
-                <label for="qn5"><b>What's her relationship status?</b></label><br>
-                <label for="qn5a" class="mx-2"><b>Single</b></label>
-                    <input type="radio" name="status" value="single" id="qn5a" style="height:25px; width:25px; vertical-align: middle;">
+                <label for="qn5"><b>Favourite programming language?</b></label><br>
+                <label for="qn5a" class="mx-2"><b>PHP</b></label>
+                    <input type="radio" name="status" value="php" id="qn5a" style="height:25px; width:25px; vertical-align: middle;">
                     <br>
-                <label for="qn5b" class="mx-2"><b>Dating</b></label>
-                    <input type="radio" name="status" value="dating" id="qn5b" style="height:25px; width:25px; vertical-align: middle;">
+                <label for="qn5b" class="mx-2"><b>Python</b></label>
+                    <input type="radio" name="status" value="python" id="qn5b" style="height:25px; width:25px; vertical-align: middle;">
                     <br>
-                <label for="qn5c" class="mx-2"><b >arried</b></label>
-                    <input type="radio" name="status" value="ex" id="qn5c" style="height:25px; width:25px; vertical-align: middle;">
+                <label for="qn5c" class="mx-2"><b>Java</b></label>
+                    <input type="radio" name="status" value="java" id="qn5c" style="height:25px; width:25px; vertical-align: middle;">
                     <br>
             </div>
 
@@ -73,11 +73,11 @@
         <div id="score-page" class="mx-2 my-4 pb-2 text-center" style="border-bottom: 2px solid rgb(5, 50, 102); display: none;">
             
             <div id="positive">
-                <p><b>Horray! It seems you know her quite well, <br><strong>send her a screenshot as a gift</strong></b></p>
+                <p><b>Horray! It seems you know him quite well, <br><strong>send him a screenshot as a gift</strong></b></p>
             </div>
 
             <div id="negative">
-                <p><b>Ooh Snap! Try and spend more time with her, <br><strong>anyway send her a screenshot as a gift</strong></b></p>
+                <p><b>Ooh Snap! Try and spend more time with him, <br><strong>anyway send him a screenshot as a gift</strong></b></p>
             </div>
 
             <div>
@@ -91,16 +91,15 @@
 
             <div class="mt-4">
                 <blockquote class="p-2 text-center" style="background-color: rgba(231, 228, 9, 0.897); border-radius: 5px;">
-                    <p style="font-size: 20px; font-weight: bold;" id="quote">"In your special day, know that we care."</p>
-                    <!-- <cite>Birthday Girl</cite> -->
+                    <p style="font-size: 20px; font-weight: bold;" id="quote">""</p>
                 </blockquote>
             </div>
             
         </div>
 
         <div class="m-2 text-center">
-            <p><b>Don't stop here send this link (<a href="https://bit.ly/3FzwAV3">https://bit.ly/3FzwAV3</a>) to more of her friends</b></p>
-            <strong style="font-size: 20px;">Happy Birthday Becca</strong>
+            <p><b>Don't stop here send this link (<a href="https://bit.ly/3FzwAV3">https://bit.ly/3FzwAV3</a>) to more of his friends</b></p>
+            <strong style="font-size: 20px;">Happy Birthday David Laizer</strong>
         </div>
     </div>
 
@@ -114,35 +113,35 @@
                var score=0;
                var correction = Array();
 
-               if( $("#qn1").val().toLowerCase().trim() == "walter" ){
+               if( $("#qn1").val().toLowerCase().trim() == "west world" || $("#qn1").val().toLowerCase().trim() == "westworld" ){
                 score++;
                }
                else{
-                $("#answers").append("<li>Her middle name is Walter</li>");
+                $("#answers").append("<li>The Movie is West World</li>");
                }
-               if( $("#qn2").val().trim() == "20" ){
+               if( $("#qn2").val().trim() == "22" ){
                 score++;
                }
                else{
-                $("#answers").append("<li>She is 20 years old</li>");
+                $("#answers").append("<li>He is 22 years old</li>");
                }
-               if( $("#qn3").val().toLowerCase().trim() == "london" ){
+               if( $("#qn3").val().toLowerCase().trim() == "emiliana" || $("#qn3").val().toLowerCase().trim() == "emilliana" ){
                 score++;
                }
                else{
-                $("#answers").append("<li>Her favorite place of residence is London</li>");
+                $("#answers").append("<li>His Ex is Emiliana</li>");
                }
-               if( $("#qn4").val().trim() == "2" ){
+               if( $("#qn4").val().toLowerCase().trim() == "fifa 22" ){
                 score++;
                }
                else{
-                $("#answers").append("<li>She has two siblings, Tony and Shadrack</li>");
+                $("#answers").append("<li>His favourite game is FIFA 22</li>");
                }
-               if( $('input[name="status"]:checked').val() == "single" ){
+               if( $('input[name="status"]:checked').val() == "java" ){
                 score++;
                }
                else{
-                $("#answers").append("<li>She is single, men what are you waiting for!</li>");
+                $("#answers").append("<li>His favourite programming language is Java</li>");
                }
 
                if(score >= 4){
@@ -163,11 +162,13 @@
 
                $("#score").text(score+"/5");
 
-               quotes = ["Our age is merely the number of years the world has been enjoying us!",
-                        "I hope your celebration gives you many happy memories!",
-                        "Wishing you the biggest slice of happy today.",
-                        "It's your special day — get out there and celebrate!",
-                        "Hope all your birthday wishes come true!"];
+               quotes = [
+                    "The brain is the last analog device ~Henry Ford~",
+                    "The brain is the last analog device ~Henry Ford~",
+                    "The brain is the last analog device ~Henry Ford~",
+                    "The brain is the last analog device ~Henry Ford~",
+                    "The brain is the last analog device ~Henry Ford~"
+                ];
                $("#quote").text(quotes[Math.floor(Math.random()*quotes.length)]);
 
             });
